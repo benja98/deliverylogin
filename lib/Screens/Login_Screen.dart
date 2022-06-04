@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Sign In",
+                              "Iniciar sesion",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.black,
@@ -56,12 +56,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Email";
+                                  return "Por favor ingrese correo electrónico";
                                 }
                               },
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                hintText: 'Email',
+                                hintText: 'Correo electrónico',
                                 prefixIcon: Icon(
                                   Icons.email,
                                   color: Colors.black,
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Por favor, ingrese contraseña";
                                 }
                               },
                               onChanged: (value) {
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                  hintText: 'Password',
+                                  hintText: 'Contraseña',
                                   prefixIcon: Icon(
                                     Icons.lock,
                                     color: Colors.black,
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             SizedBox(height: 80),
                             LoginSignupButton(
-                              title: 'Login',
+                              title: 'Entrar',
                               ontapp: () async {
                                 if (formkey.currentState!.validate()) {
                                   setState(() {
@@ -112,14 +112,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title: Text("Ops! Login Failed"),
+                                        title: Text(
+                                            "Ops! Error de inicio de sesion"),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(
                                             onPressed: () {
                                               Navigator.of(ctx).pop();
                                             },
-                                            child: Text('Okay'),
+                                            child: Text('Ok'),
                                           )
                                         ],
                                       ),
@@ -144,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Row(
                                 children: [
                                   Text(
-                                    "Don't have an Account ?",
+                                    "No tienes cuenta ?",
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.black87),
                                   ),
@@ -152,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Hero(
                                     tag: '1',
                                     child: Text(
-                                      'Sign up',
+                                      'Registrarse',
                                       style: TextStyle(
                                           fontSize: 21,
                                           fontWeight: FontWeight.bold,

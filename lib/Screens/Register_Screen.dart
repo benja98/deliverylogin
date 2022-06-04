@@ -56,7 +56,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             Hero(
                               tag: '1',
                               child: Text(
-                                "Sign up",
+                                "Registrarse",
                                 style: TextStyle(
                                     fontSize: 30,
                                     color: Colors.black,
@@ -70,11 +70,11 @@ class _SignupScreenState extends State<SignupScreen> {
                                 email = value.toString().trim();
                               },
                               validator: (value) => (value!.isEmpty)
-                                  ? ' Please enter email'
+                                  ? ' Por favor ingrese el correo electrónico'
                                   : null,
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                hintText: 'Enter Your Email',
+                                hintText: 'Introduce tu correo electrónico',
                                 prefixIcon: Icon(
                                   Icons.email,
                                   color: Colors.black,
@@ -86,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Por favor, ingrese contraseña";
                                 }
                               },
                               onChanged: (value) {
@@ -94,7 +94,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                  hintText: 'Choose a Password',
+                                  hintText: 'Por favor, ingrese contraseña',
                                   prefixIcon: Icon(
                                     Icons.lock,
                                     color: Colors.black,
@@ -102,7 +102,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                             SizedBox(height: 80),
                             LoginSignupButton(
-                              title: 'Register',
+                              title: 'Registrase',
                               ontapp: () async {
                                 if (formkey.currentState!.validate()) {
                                   setState(() {
@@ -118,7 +118,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                         content: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                              'Sucessfully Register.You Can Login Now'),
+                                              'Regístrese con éxito. Puede iniciar sesión ahora'),
                                         ),
                                         duration: Duration(seconds: 5),
                                       ),
@@ -132,15 +132,14 @@ class _SignupScreenState extends State<SignupScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title:
-                                            Text(' Ops! Registration Failed'),
+                                        title: Text(' Ops! Registro fallido'),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(
                                             onPressed: () {
                                               Navigator.of(ctx).pop();
                                             },
-                                            child: Text('Okay'),
+                                            child: Text('Ok'),
                                           )
                                         ],
                                       ),

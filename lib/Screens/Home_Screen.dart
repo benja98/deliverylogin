@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('You have logged in Successfuly'),
+            Text('Ha iniciado sesión con éxito'),
             SizedBox(height: 50),
             Container(
               height: 60,
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ElevatedButton(
                   clipBehavior: Clip.hardEdge,
                   child: Center(
-                    child: Text('Log out'),
+                    child: Text('Cerrar sesión'),
                   ),
                   onPressed: () async {
                     await _signOut();
