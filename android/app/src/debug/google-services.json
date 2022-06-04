@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910773462935",
+    "project_id": "delibery-f2942",
+    "storage_bucket": "delibery-f2942.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910773462935:android:6ba8623cd45f0f5d9b06d2",
+        "android_client_info": {
+          "package_name": "com.example.deliverylogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910773462935-bs05806nh926jnfqf5m0lbiltnsqroc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxqv6LbNMB7qEqDeIJzWAZbIA3c15rNDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910773462935-bs05806nh926jnfqf5m0lbiltnsqroc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
